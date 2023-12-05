@@ -20,6 +20,6 @@ COPY . .
 # VOLUME /app
 
 # その他設定
-ENV ALLOYDB_IP="10.52.0.2"
+ENV ALLOYDB_IP="10.224.128.12"
 EXPOSE 8080
-CMD [ "yarn", "express" ]
+CMD [ "yarn", "start" ]
