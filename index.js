@@ -9,13 +9,13 @@ const HOST = "0.0.0.0";
 
 const client = new Client({
   user: "postgres",
-  host: "10.224.128.12",
+  // host: "10.224.128.12",
   database: "guestbook",
   password: "postgres",
   port: 5432,
 });
 
-// client.host = process.env.ALLOYDB_IP;
+client.host = process.env.ALLOYDB_IP;
 
 // Init
 const app = express();
