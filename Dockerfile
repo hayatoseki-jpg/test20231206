@@ -7,7 +7,7 @@ WORKDIR /app
 # ワイルドカードを使用して、package.json と package-lock.json の両方が確実にコピーされるようにします。
 # 可能であれば (npm@5+)
 COPY package*.json ./
-COPY *.lock ./
+# COPY *.lock ./
 RUN yarn install
 
 # 本番用にコードを作成している場合
@@ -20,5 +20,6 @@ COPY . .
 # VOLUME /app
 
 # その他設定
+ENV ALLOYDB_IP="10.52.0.2"
 EXPOSE 8080
 CMD [ "yarn", "express" ]
